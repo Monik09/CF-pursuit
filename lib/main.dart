@@ -6,12 +6,7 @@ import 'package:provider/provider.dart';
 
 
 void main() {
-  runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => LandingScreenMobile()),
-        // Provider(create: (context) => SomeOtherClass()),
-      ],
-      child: MyApp(),));
+  runApp( MyApp(),);
 }
 
 class MyApp extends StatelessWidget {
