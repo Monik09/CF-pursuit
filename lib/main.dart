@@ -1,4 +1,5 @@
 import 'package:cf_pursuit/screens/landing_screen.dart';
+import 'package:cf_pursuit/screens/ranking.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
         disabledColor: Colors.white
       ),
-      home:LandingScreenMobile()// MyHomePage(title: 'Flutter Demo Home Page'),
+    //  home:LandingScreenMobile()// MyHomePage(title: 'Flutter Demo Home Page'),
+    home:Ranking(),
     );
   }
 }
