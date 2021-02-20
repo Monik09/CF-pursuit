@@ -26,7 +26,8 @@ class _RanksChartState extends State<RanksChart> {
       height: 200,
       color: Colors.purple[900],
       child: FutureBuilder(
-        future: UserData().getUserRatingData(widget.userName??""),
+
+        future: UserData.getUserRatingData(widget.userName??"",[]),
         builder: (context, rankData) {
           List<int> ratings = [];
           Map<String, dynamic> userRankData =

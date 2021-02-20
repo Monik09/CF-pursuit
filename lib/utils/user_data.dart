@@ -1,12 +1,17 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import "package:collection/collection.dart";
 import 'package:http/http.dart' as http;
 
 class UserData {
   Map<String, dynamic> r;
+  static List<Map<String, dynamic>> rankinfo = [];
+  static Map newMappk;
+  //////////////////////////////////////////////////////
   Future<dynamic> checkUser(String name) async {
     print("-->");
     print(name);
+
     var result =
         await http.get("https://codeforces.com/api/user.info?handles=$name");
     if (result.statusCode == 200) {
@@ -30,10 +35,66 @@ class UserData {
     }
   }
 
-  Future<dynamic> getUserRatingData(String userName) async {
+  static Future<dynamic> getUserRatingData(String userName, var rankinf) async {
     var result = await http
         .get("https://codeforces.com/api/user.rating?handle=$userName");
     if (result.statusCode == 200) {
+    //  List<Map<String, dynamic>> da = [];
+      Map<String, dynamic> newMap = (json.decode(result.body));
+     // da.add(dd);
+      //  rankinfo.add({'handle':dd[0]['handle']});
+      rankinfo.clear();
+    //check it brooooooooooooooooo
+      //   List <String> dt=[];
+      print(rankinfo);
+      print("11111111111111111111111111111111111111111111111");
+
+      //  Map<String, dynamic> newMap = groupBy(da, (obj) => obj['contestId']);
+     // Map<String, dynamic> newMap = dd;
+      for (var v in newMap.values) {
+        //  print(v);
+
+        //    print('hiiiyyyyyyyyyyyyyyyyyyyyyyyy');
+        if (v is List) {
+          int k = 0;
+          for (var j in v) {
+            if (++k > v.length - 10) {
+              //#########################
+              rankinfo.add({
+                'handle': j['handle'],
+                'contestId': j['contestId'],
+                'rank': j['rank'],
+              });
+              // j.forEach((i, value) {
+              //   print('index=$i, value=$value');
+              // });
+              //   print("heeloooo12e25445");
+            }
+          }
+        }
+      }
+      print(rankinfo);
+      print("11111111111111111111111111111111111111111111111");
+      //#############3tryy...
+      //  newMappk = groupBy(rankinfo, (obj) => obj['handle']);
+      // .map((k, v) => MapEntry(
+      //     k,
+      //     v.map((item) {
+      //       item.remove('handle');
+      //       return item;
+      //     }).toList()));
+      // print(newMapp);
+      //  print("MWNEE1222222222121");
+      // for (var j in rankinfo) {
+      //   j.forEach((key, value) {
+      //     print('key==$key, and value==$value');
+      //   });
+      //   print("BIGSHOW");
+      // }
+      // for(var i in dd)
+
+      //    rankinfo.add({"handle":dd[0]["handle"],"contestID":});
+
       // print(result.toString());
       return result.body;
     } else {
@@ -47,7 +108,7 @@ class UserData {
         .get("https://codeforces.com/api/user.rating?handle=$userName");
     if (result.statusCode == 200) {
       r = json.decode(result.body) as Map<String, dynamic>;
-      print("////////////////"+r["result"][0]["contestId"].toString());
+      print("////////////////" + r["result"][0]["contestId"].toString());
     } else {
       return "Error()";
     }
