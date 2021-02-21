@@ -1,6 +1,7 @@
 import 'package:cf_pursuit/screens/landing_screen.dart';
 import 'package:cf_pursuit/screens/profile_screen.dart';
 import 'package:cf_pursuit/screens/rank_screen.dart';
+import 'package:cf_pursuit/screens/problem.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CF Pursuit',
       theme: ThemeData(primarySwatch: Colors.teal, disabledColor: Colors.white),
-   //   home: LandingScreenMobile(),
-      home:RankScreen(),
+      //home: LandingScreenMobile(),
+      home:Problem(),
+    //  home:RankScreen(),
       routes: {
         ProfileScreen.routeName: (context) => ProfileScreen(),
         RankScreen.routeName: (context) => RankScreen(),

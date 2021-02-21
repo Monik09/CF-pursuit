@@ -41,15 +41,17 @@ class RankScreen extends StatelessWidget {
   var data = [
     {
       'handle': 'valiant_vidit',
-      'contestId': [
-        '1360',
-        '1361',
-        '1362',
-      ],
+      'contestId': '123',
+      'rank': '1',
     },
+    // {
+    //   'handle': 'vikrant3302',
+    //   'contestId': ['1361', '1362', '1363'],
+    // }
     {
       'handle': 'vikrant3302',
-      'contestId': ['1361', '1362', '1363'],
+      'contestId': '123',
+      'rank': '2',
     }
   ];
   @override
@@ -60,6 +62,14 @@ class RankScreen extends StatelessWidget {
     //  rankinfo = UserData.rankinfo;
 
     print("######");
+    var pk = groupBy(data, (obj) => obj['contestId']).map((k, v) => MapEntry(
+        k,
+        v.map((item) {
+          item.remove('contestId');
+          return item;
+        }).toList()));
+    print("hellllllllllllooooooooo maoooonikkkkkkkkk");
+    print(pk);
     // rankinfo.clear();
     // print(UserData.rankinfo);
     return Scaffold(
@@ -122,7 +132,8 @@ class RankScreen extends StatelessWidget {
                       cnt) //here 1478 replaced by contestarray!!
                     rankingss.add({
                       'handle': handle,
-                      'contestId':cnt.toString(),'rank': element['rank'].toString()
+                      'contestId': cnt.toString(),
+                      'rank': element['rank'].toString()
                     });
                   //    print(handle.toString()+"ams "+element['contestId'].toString());
                 });
@@ -193,7 +204,6 @@ class RankScreen extends StatelessWidget {
                           children: <Widget>[
                             InkWell(
                               onTap: () {
-                    
                                 // Navigator.push(
                                 //     context,
                                 //     MaterialPageRoute(
@@ -207,7 +217,10 @@ class RankScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'rank in contest with ID = '+newMapps[index]['contestId']+ ' was  '+newMapps[index]['rank'],
+                              'rank in contest with ID = ' +
+                                  newMapps[index]['contestId'] +
+                                  ' was  ' +
+                                  newMapps[index]['rank'],
                               //'Note Text',
                               style: TextStyle(color: Colors.grey.shade600),
                             ),
