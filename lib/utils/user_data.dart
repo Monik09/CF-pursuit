@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class UserData {
-  Map<String, dynamic> r = {}; 
+  Map<String, dynamic> r = {};
   static List<Map<String, dynamic>> rankinfo = [];
   static List contst = [];
   static Map newMappk;
-  
+
   Future<dynamic> checkUser(String name) async {
     print("-->");
     print(name);
@@ -39,7 +39,33 @@ class UserData {
   Future<void> submitUserData(String userName) async {
     var result = await http.put(
         "https://cf-pursuit-default-rtdb.firebaseio.com/users/$userName.json",
-        body: json.encode({"userName": userName,"timestamp": DateTime.now().millisecondsSinceEpoch}));
+        body: json.encode({
+          "userName": userName,
+          "timestamp": DateTime.now().millisecondsSinceEpoch
+        }));
+    if (result.statusCode == 200) {
+      print("hurray!User details added successfully!!");
+    } else {
+      print("nope,error in adding user to database");
+    }
+  }
+
+  Future<dynamic> getDBUserData() async {
+    var result = await http.get(
+      "https://cf-pursuit-default-rtdb.firebaseio.com/users.json",
+    );
+    // final extractedData = json.decode(result.body) as Map<String, dynamic>;
+    // print(extractedData);
+    return result.body;
+    // extractedData.forEach((profileId, profileData) {
+    //   loadedProfile.add(
+    //     Profile(
+    //       email: profileData['email'],
+    //       lastName: profileData['firstName'],
+    //       firstName: profileData['lastName'],
+    //     ),
+    //   );
+    // });
     if (result.statusCode == 200) {
       print("hurray!User details added successfully!!");
     } else {
@@ -66,8 +92,6 @@ class UserData {
       return result.body;
     }
   }
-
-
 
   //////////////////
   static Future<dynamic> getUserRankData(String userName, var rankinf) async {
