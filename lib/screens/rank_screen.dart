@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "package:collection/collection.dart";
+import 'package:json_table/json_table.dart';
 import 'dart:convert';
 
 import 'package:cf_pursuit/utils/user_data.dart';
@@ -113,13 +114,16 @@ class RankScreen extends StatelessWidget {
             print("ghett");
             //////////////////
             for (var cnt in UserData.contst) {
-           //   print('id==>> '+cnt.toString());
+              //   print('id==>> '+cnt.toString());
               newMapp.forEach((handle, value) {
                 value.forEach((element) {
                   // ignore: unrelated_type_equality_checks
                   if (element['contestId'].toString() ==
                       cnt) //here 1478 replaced by contestarray!!
-                    rankingss.add({handle, cnt, element['rank'].toString()});
+                    rankingss.add({
+                      'handle': handle,
+                      'contestId':cnt.toString(),'rank': element['rank'].toString()
+                    });
                   //    print(handle.toString()+"ams "+element['contestId'].toString());
                 });
               });
@@ -135,34 +139,94 @@ class RankScreen extends StatelessWidget {
 ////...................................\\\\\\
             //222@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
             // UserData.rankinfo.clear();
-            return new Column(
-              children: [
-                for (var i in newMapp.entries)
-                  Row(
-                    // scrollDirection: Axis.horizontal,
-                    children: [
-                      Text(i.key),
-                      //   for (var j in i.value) //for rght of handles
-                      //  //   j.forEach((key, value) {
-                      //       RaisedButton(
-                      //         onPressed: null,
-                      //         child: Text(key.toString() + "kkk"),
-                      //       );
-                      //     })
 
-                      //   j.forEach((k, v) {
-                      //     RaisedButton(
-                      //       onPressed: null,
-                      //       child: Text('heyyy$v'),
-                      //     );
-                      //   }),
-                    ],
+            // var newMapps = groupBy(rankingss, (obj) => obj['handle'])
+            //     .map((k, v) => MapEntry(
+            //         k,
+            //         v.map((item) {
+            //           item.remove('handle');
+            //           return item;
+            //         }).toList()));
+            // print(newMapps['valiant_vidit']);
+            var newMapps = rankingss;
+            /////@@@@@@@@@///@@@@@@@///@@@@@@@@
+            // return new Column(
+            //   children: [
+            //     for (var i in newMapp.entries)
+            //       Row(
+            //         // scrollDirection: Axis.horizontal,
+            //         children: [
+            //           Text(i.key),
+            //           //   for (var j in i.value) //for rght of handles
+            //           //  //   j.forEach((key, value) {
+            //           //       RaisedButton(
+            //           //         onPressed: null,
+            //           //         child: Text(key.toString() + "kkk"),
+            //           //       );
+            //           //     })
+
+            //           //   j.forEach((k, v) {
+            //           //     RaisedButton(
+            //           //       onPressed: null,
+            //           //       child: Text('heyyy$v'),
+            //           //     );
+            //           //   }),
+            //         ],
+            //       ),
+            //     //   Text('heyy beauty!!!'),
+
+            //     //  ),
+            //   ],
+            // );
+            ////////////////////////////////////
+            return ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                return Card(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        top: 32, bottom: 32, left: 16, right: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            InkWell(
+                              onTap: () {
+                    
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (_) => Welcome()));
+                              },
+                              child: Text(
+                                newMapps[index]['handle'],
+                                //'Note Title',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 22),
+                              ),
+                            ),
+                            Text(
+                              'rank in contest with ID = '+newMapps[index]['contestId']+ ' was  '+newMapps[index]['rank'],
+                              //'Note Text',
+                              style: TextStyle(color: Colors.grey.shade600),
+                            ),
+                          ],
+                        ),
+                        //SizedBox(width: 20),
+                        // Container(
+                        //   height: 50,
+                        //   width: 50,
+                        //   child: Image.asset(newMapps[index]['img']),
+                        // )
+                      ],
+                    ),
                   ),
-                //   Text('heyy beauty!!!'),
-
-                //  ),
-              ],
+                );
+              },
+              itemCount: newMapps == null ? 0 : newMapps.length,
             );
+            //////////////////////////////////////
           }
           return CircularProgressIndicator.adaptive();
         },

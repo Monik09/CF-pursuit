@@ -122,6 +122,7 @@ class UserData {
   }
 
   static Future<dynamic> getPreContestData() async {
+    contst.clear();
     var res =
         await http.get("https://codeforces.com/api/contest.list?gym=false");
     if (res.statusCode == 200) {
