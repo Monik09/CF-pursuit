@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CF Pursuit',
       theme: ThemeData(primarySwatch: Colors.teal, disabledColor: Colors.white),
-      home: LandingScreenMobile(),
+   //   home: LandingScreenMobile(),
+      home:RankScreen(),
       routes: {
         ProfileScreen.routeName: (context) => ProfileScreen(),
         RankScreen.routeName: (context) => RankScreen(),
