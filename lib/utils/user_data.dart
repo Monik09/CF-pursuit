@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class UserData {
-  Map<String, dynamic> r = {};
+  Map<String, dynamic> r = {}; 
   static List<Map<String, dynamic>> rankinfo = [];
   static List contst = [];
   static Map newMappk;
+  
   Future<dynamic> checkUser(String name) async {
     print("-->");
     print(name);
@@ -65,6 +66,8 @@ class UserData {
       return result.body;
     }
   }
+
+
 
   //////////////////
   static Future<dynamic> getUserRankData(String userName, var rankinf) async {
@@ -151,12 +154,12 @@ class UserData {
             //  //for size....here now 10!!
           });
       });
-
-      for (var ij in contst) {
-        print("1___ " + ij);
-      }
-
-      return res.body;
+      // print(res.body);
+      // for (var ij in contst) {
+      //   print("1___ " + ij);
+      // }
+      return contst;
+      // return res.body;
     } else {
       return "Error occured !!";
     }
