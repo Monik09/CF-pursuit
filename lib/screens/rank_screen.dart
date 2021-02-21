@@ -79,6 +79,14 @@ class _RankScreenState extends State<RankScreen> {
   @override
   Widget build(BuildContext context) {
     print("######");
+    // var pk = groupBy(data, (obj) => obj['contestId']).map((k, v) => MapEntry(
+    //     k,
+    //     v.map((item) {
+    //       item.remove('contestId');
+    //       return item;
+    //     }).toList()));
+    // print("hellllllllllllooooooooo maoooonikkkkkkkkk");
+    // print(pk);
     // rankinfo.clear();
     // print(UserData.rankinfo);
     return Scaffold(

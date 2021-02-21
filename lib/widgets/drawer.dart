@@ -1,4 +1,5 @@
 import 'package:cf_pursuit/screens/landing_screen.dart';
+import 'package:cf_pursuit/screens/problem.dart';
 import 'package:cf_pursuit/screens/profile_screen.dart';
 import 'package:cf_pursuit/screens/rank_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,17 @@ Widget appDrawer(BuildContext context) {
           },
           child: Text(
             "View Profile",
+            style: GoogleFonts.roboto(fontSize: 20),
+          ),
+        ),
+        Divider(),
+         FlatButton(
+          onPressed: () {
+             Navigator.of(context).pop();
+            Navigator.of(context).pushNamed(Problem.routeName);
+          },
+          child: Text(
+            "Problem Recommender",
             style: GoogleFonts.roboto(fontSize: 20),
           ),
         ),
