@@ -1,6 +1,5 @@
 # CF Pursuit
 
-____
 
 # About our Project:
 CF Pursuit is an app which uses codeforces api to collect the users data and show them in a very analytical and pictorial manner giving the insight to the self-improvement in the competitive area. It has many unique and creative features which is discussed in detail below:
@@ -14,6 +13,7 @@ CF Pursuit is an app which uses codeforces api to collect the users data and sho
 |__*Profile viewer*__ : With a submission piechart as well as customized graph plot for ratings:chart_with_upwards_trend: of different years for good pictorial analysis.|<a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=17GNmSAz6LiFdO4zsS0lKCqrl7O-wm6p8" width="450" height="500"/></img> |
 |__*Mark future contests*__ : To show the upcoming contests of codeforces with their time and countdown with an amazing feature to mark it in the user's google calender to ensure that the user gets notified with an alarm 10-15 mins before the contests starts. | <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1ohHIrvcx_6IUAoQeBSznBjjmF2cUKSgp" width="450" height="500"/></img> |
 
+____
 
 # How to run:running: the app:
 <ul>
@@ -39,6 +39,8 @@ CF Pursuit is an app which uses codeforces api to collect the users data and sho
 # Lets see what we developed:computer::
 <p align="center">
 <a href="https://drive.google.com/uc?export=view&id=1_NOl7RORVOolkclCbECngqPM3ck8F4Xh"></a><img src="https://drive.google.com/uc?export=view&id=1_NOl7RORVOolkclCbECngqPM3ck8F4Xh" width="250" height="500"/></img></p>
+
+____
 
 # Team Details
 <h4>Team Name:</h4><p>Donaghys</p>
