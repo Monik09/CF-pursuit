@@ -2,7 +2,7 @@
 
 
 # About our Project:
-CF Pursuit is an app which uses codeforces api to collect the users data and show them in a very analytical and pictorial manner giving the insight to the self-improvement in the competitive area. It has many unique and creative features which is discussed in detail below:
+CF Pursuit is an app that uses codeforces API to collect the user's data and show them in a very analytical and pictorial manner giving insight to self-improvement in the area of competitive programming. There are many unique and creative features for a competitive app which are discussed in detail below:
 
 ### Features:
 
@@ -21,7 +21,7 @@ ____
 </ul>
 
  ``` 
- If it fails to install because of mobile's protection settings, try to install it again
+ If it fails to install because of the mobile settings, try to reinstall it.
  ```
  
 <p align="center"><b>-OR-</b></p> 
