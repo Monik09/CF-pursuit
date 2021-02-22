@@ -8,10 +8,10 @@ CF Pursuit is an app which uses codeforces api to collect the users data and sho
 
 | Feature Detail | Screenshot | 
 | ------- | :---: |
-| __*Problem recommender*__ : A customized and dynamic set of problems with valid links different for every different users depending on their recent submissions and their respective tags.| <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1UxdFD8eL_M4x4sk8rO_JEmxJ5egRqsn0" width="250" height="500"/></img>|
-|__*Customized ranklist*__ : Showing ranklist of users for recent 10 contests at a single time in order to provide ease for parallel comparisons.| <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1qQKXQGq79zLRQ-mHYEuWATqcmTqhL31P" width="250" height="500"/></img> |
-|__*Profile viewer*__ : With a submission piechart as well as customized graph plot for ratings:chart_with_upwards_trend: of different years for good pictorial analysis.|<a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=17GNmSAz6LiFdO4zsS0lKCqrl7O-wm6p8" width="250" height="500"/></img> |
-|__*Mark future contests*__ : To show the upcoming contests of codeforces with their time and countdown with an amazing feature to mark it in the user's google calender to ensure that the user gets notified with an alarm 10-15 mins before the contests starts. | <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1ohHIrvcx_6IUAoQeBSznBjjmF2cUKSgp" width="250" height="500"/></img> |
+| __*Problem recommender*__ : A customized and dynamic set of problems with valid links different for every different users depending on their recent submissions and their respective tags.| <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1UxdFD8eL_M4x4sk8rO_JEmxJ5egRqsn0"/></img>|
+|__*Customized ranklist*__ : Showing ranklist of users for recent 10 contests at a single time in order to provide ease for parallel comparisons.| <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1qQKXQGq79zLRQ-mHYEuWATqcmTqhL31P" /></img> |
+|__*Profile viewer*__ : With a submission piechart as well as customized graph plot for ratings:chart_with_upwards_trend: of different years for good pictorial analysis.|<a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=17GNmSAz6LiFdO4zsS0lKCqrl7O-wm6p8" /></img> |
+|__*Mark future contests*__ : To show the upcoming contests of codeforces with their time and countdown with an amazing feature to mark it in the user's google calender to ensure that the user gets notified with an alarm 10-15 mins before the contests starts. | <a href="https://drive.google.com/uc?export=view&id=1T7vRiGqj-jM8Kh7kb0zJupKu7M4L9rLU"></a><img src="https://drive.google.com/uc?export=view&id=1ohHIrvcx_6IUAoQeBSznBjjmF2cUKSgp"/></img> |
 
 ____
 
@@ -23,8 +23,9 @@ ____
  ``` 
  If it fails to install because of mobile's protection settings, try to install it again
  ```
-<ul>
  
+<p align="center"><b>-OR-</b></p> 
+<ul>  
  <li>Download apk from this <a href="https://drive.google.com/uc?export=view&id=1Y_Z0WuhddoVkOfqtFl644m11Z1O-wnwT">link</a>.</li>
 </ul>
 
